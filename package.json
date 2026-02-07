@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-hookr-app",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "n8n nodes for Hookr app integration",
 	"license": "MIT",
 	"homepage": "https://hookr.app",
