@@ -12,9 +12,9 @@ import {
 
 export class Hookr implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Hookr (Push Notifications)',
+		displayName: 'Hookr',
 		name: 'hookr',
-		icon: { light: 'file:hookr.svg', dark: 'file:hookr.dark.svg' },
+		icon: 'file:hookr-round.svg',
 		group: ['input'],
 		version: 1,
 		description: 'Send push notifications to your iOS and Android devices using Hookr app',

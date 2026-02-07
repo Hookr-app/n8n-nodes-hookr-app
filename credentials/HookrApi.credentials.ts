@@ -11,9 +11,9 @@ export class HookrApi implements ICredentialType {
 
 	displayName = 'Hookr API';
 
-	icon: Icon = { light: 'file:../icons/hookr.svg', dark: 'file:../icons/hookr.dark.svg' };
+	icon: Icon = 'file:../icons/hookr-round.svg';
 
-	documentationUrl = 'https://docs.hookr.app/';
+	documentationUrl = 'https://docs.hookr.app/integrations';
 
 	properties: INodeProperties[] = [
 		{
