@@ -24,13 +24,6 @@ export class Hookr implements INodeType {
 				required: true,
 			},
 		],
-		requestDefaults: {
-			baseURL: 'https://api.hookr.app/n8n',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
 		defaults: {},
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
@@ -117,10 +110,11 @@ export class Hookr implements INodeType {
 					options,
 				);
 
-				results.push({ json: response as JsonObject });
+				results.push({
+					json: response as JsonObject,
+					pairedItem: { item: i },
+				});
 			} catch (error) {
-				this.logger.error(`Error sending push notification: ${JSON.stringify(error)}`);
-
 				const err = error as JsonObject & {
 					message?: string;
 					description?: string | string[];
